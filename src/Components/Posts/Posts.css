@@ -1,0 +1,18 @@
+.Disappointed {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+    color: blue;
+    }
+    .Disappointed span {
+        background-color: rgb(145, 145, 252);
+        padding: 10px;
+        width: 20%;
+        text-align: center;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .Language {
+        color: blue;
+    }

@@ -1,0 +1,58 @@
+.My-Home {
+border: 2px solid rgba(88, 68, 68, 0.094);
+border-radius: 15px;
+margin-left: 50px;
+height: 10vw;
+display: flex;
+justify-content: center;
+width: 50%;
+margin-top: 15px;
+padding: 20px;
+}
+/*Image */
+.My-Home .profile-personal {
+    width: 56px;
+    clip-path: circle(30%);
+    object-fit: cover;
+    margin-right: 30px;
+}
+.My-Home .Post-profile {
+    background-color: rgba(133, 127, 127, 0.094);
+    width: 90%;
+    color: black;
+    outline:none; 
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 50px; /* Set desired height */
+    font-size: 14px; /* Adjust text size */
+}
+.My-Home .Icons-Home {
+position: absolute;
+right: 50%;
+bottom: 67%;
+cursor: pointer;
+display: flex;
+align-items: center;
+flex-direction: row;
+gap: 20px;
+color: blue;
+}
+
+.Getting {
+    margin-bottom: 20px;
+}
+.First-post {
+    margin-left: 50px;
+    padding: 20px;
+}
+.Box {
+    display: flex;
+    flex-direction: column;
+}
+.Coding {
+    display: flex;
+    justify-content: space-between;
+}
+.Language {
+    color: rgba(204, 204, 255, 0.863);
+}
