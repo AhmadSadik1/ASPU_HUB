@@ -36,7 +36,8 @@ class RegistrationController extends Controller
             'password' => Hash::make($request->password),
             'roleID' => $roleMapping[$request->role],
             'email_verification_code' => $verificationCode,
-            'email_verification_expires_at' => Carbon::now()->addMinutes(10), // Expires in 10 minutes
+            'email_verification_expires_at' => Carbon::now()->addMinutes(10), 
+            "birth_date"=> $request->birth_date,
         ]);
 
         // Send verification email
