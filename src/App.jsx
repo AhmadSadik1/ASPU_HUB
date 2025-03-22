@@ -10,7 +10,7 @@ import Forget from './Components/Forget'
 import ResPass from './Components/ResetPassword/ResPass'
 import NewPass from './Components/NewPass/NewPass'
 import Home from './Components/Home/Home'
-
+import Verify from './Verify'
 function App() {
 
 return (
@@ -22,7 +22,7 @@ return (
 <Route path='/Forget' element ={<Forget/>} />
 <Route path='/ResPass' element ={<ResPass/>} />
 <Route path='/NewPass' element ={<NewPass/>} />
-
+  <Route path='/Verify' element ={<Verify />} /> 
  </Routes>
   
 )
