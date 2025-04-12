@@ -63,28 +63,13 @@ const Register = () => {
 
       console.log('✅ Server response:', response.data);
 
-      if (response.data.message === 'User registered successfully. Check your email for the verification code.'){
-        const token = response.data.token;
-      if (token) {
-        localStorage.setItem('token', token); // Save token
-        console.log('🔐 Token saved:', token); // Log it
-      }
-      
-        {
+      if (response.data.message === 'User registered successfully. Check your email for the verification code.') {
         alert('Registration successful! Check your email for the verification code.');
-        localStorage.setItem('user', JSON.stringify({
-          firstName: formData.firstName,
-          lastName: formData.lastName
-        }));
         localStorage.setItem('email', formData.email);
-        
         navigate('/Verify');
-      }
-    } 
-      else {
+      } else {
         alert('Registration failed: ' + response.data.message);
       }
-
     } catch (error) {
       console.error('❌ Registration failed:', error.response?.data);
 
@@ -156,7 +141,7 @@ const Register = () => {
             required
           />
 
-<select name="role" value={formData.role} onChange={handleChange} required>
+          <select name="role" value={formData.role} onChange={handleChange} required>
             <option value="student">Student</option>
             <option value="superadmin">Super Admin</option>
             <option value="admin">Admin</option>

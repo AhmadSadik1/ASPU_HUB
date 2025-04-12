@@ -16,3 +16,22 @@
     .Language {
         color: blue;
     }
+    .profile-personal {
+        width: 56px;
+        clip-path: circle(30%);
+        object-fit: cover;
+        margin-right: 10px;
+    }
+    .PersonalPost {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .AccName {
+        margin-right: 25px;
+    }
+    .FollowUser {
+        color: blue;
+        cursor: pointer;
+    }

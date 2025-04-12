@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const API_URL = "http://localhost:8000"; // Change to your backend URL
+
 function Verify() {
   const navigate = useNavigate();
   const [otp, setOtp] = useState(["", "", "", ""]); // 4-digit OTP input
   const [timer, setTimer] = useState(600); // 10 minutes (600 seconds)
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const email = localStorage.getItem("email") || ""; // Retrieve email
 
-  // Retrieve email from localStorage (set it after registration)
-  const email = localStorage.getItem("email") || "";
-
-  // Timer logic
+  // Timer countdown logic
   useEffect(() => {
     if (timer > 0) {
       const interval = setInterval(() => setTimer((prev) => prev - 1), 1000);
@@ -19,7 +19,7 @@ function Verify() {
     }
   }, [timer]);
 
-  // Format time to MM:SS
+  // Format time as MM:SS
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
@@ -28,21 +28,21 @@ function Verify() {
 
   // Handle OTP input change
   const handleChange = (index, value) => {
-    if (isNaN(value)) return; // Allow only numbers
+    if (!/^\d*$/.test(value)) return; // Allow only numbers
     let newOtp = [...otp];
     newOtp[index] = value;
     setOtp(newOtp);
 
     // Auto-focus to the next input
     if (value && index < 3) {
-      document.getElementById(`otp-input-${index + 1}`).focus();
+      document.getElementById(`otp-input-${index + 1}`)?.focus();
     }
   };
 
   // Handle form submission
   const handleSubmit = async () => {
     setIsSubmitting(true);
-    const code = otp.join(""); // Convert OTP array to a string
+    const code = otp.join(""); // Convert OTP array to string
 
     // Validate OTP length
     if (code.length !== 4) {
@@ -54,9 +54,9 @@ function Verify() {
     console.log("Sending:", { email, code: parseInt(code, 10) });
 
     try {
-      // Send OTP to the backend for verification
+      // Send OTP verification request
       const response = await axios.post(
-        "http://127.0.0.1:8000/api/verify-email",
+        `${API_URL}/api/verify-email`,
         {
           email: email,
           code: parseInt(code, 10), // Convert code to integer
@@ -69,24 +69,19 @@ function Verify() {
         }
       );
 
-      console.log("Response from server:", response.data);
+      console.log("✅ Response from server:", response.data);
 
-      // Check if the response contains the success message
       if (response.data.message === "Email verified successfully. You can now log in.") {
-        alert("OTP verified successfully!");
+        alert("✅ OTP verified successfully!");
         navigate("/login/Home"); // Redirect to home page
       } else {
-        alert("Invalid email or verification code.");
+        alert("❌ Invalid email or verification code.");
       }
     } catch (error) {
-      console.error("Error:", error.response?.data);
+      console.error("❌ Error:", error.response?.data);
 
-      // Display error message from the server
-      if (error.response?.data?.error) {
-        alert(error.response.data.error);
-      } else {
-        alert("OTP verification failed. Please try again.");
-      }
+      // Display server error message
+      alert(error.response?.data?.error || "OTP verification failed. Please try again.");
     }
 
     setIsSubmitting(false);
@@ -95,9 +90,9 @@ function Verify() {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-xl font-bold mb-4">Enter verification code</h2>
+        <h2 className="text-xl font-bold mb-4">Enter Verification Code</h2>
         <p className="text-gray-600 mb-6">
-          We have sent a 4-digit OTP to <span className="font-semibold">{email}</span>
+          We have sent a 4-digit OTP to <span className="font-semibold"></span>
         </p>
 
         {/* OTP Input Fields */}
@@ -116,9 +111,7 @@ function Verify() {
         </div>
 
         {/* Timer */}
-        <p className="text-green-500 mb-4">
-          {formatTime(timer)}
-        </p>
+        <p className="text-green-500 mb-4">{formatTime(timer)}</p>
 
         {/* Verify Button */}
         <button

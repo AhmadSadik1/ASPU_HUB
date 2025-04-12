@@ -2,42 +2,50 @@ import React, { useState } from 'react';
 import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import HeaderApp from './HeaderApp/HeaderApp';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();  // Hook for navigation
-        const SendData = async (event) => {
-            event.preventDefault(); // Prevent form reload
-        
-            try {
-                const response = await axios.post(
-                    "http://127.0.0.1:8000/api/student/login/",  // Correct API endpoint
-                        { email, password },
-                    {
-                        headers: { 
-                            "Content-Type": "application/json" // Ensure JSON format
-                        }
+    const SendData = async (event) => {
+        event.preventDefault(); // Prevent form reload
+    
+        try {
+            const response = await axios.post(
+                "http://127.0.0.1:8000/api/student/login/",  // Correct API endpoint
+                { email, password },
+                {
+                    headers: { 
+                        "Content-Type": "application/json" // Ensure JSON format
                     }
-                );
-        
-                console.log("Response:", response.data);
-        
-                if (response.status === 200) {
-                    alert("Login Successful!");
-                    localStorage.setItem("token", response.data.token); // Store token
-                    navigate('/login/Home'); // Redirect on success
                 }
-                if (error.response?.status === 404) {
-                    alert("User not found! Please register first.");
-                    navigate('/register');
-                }
-            } catch (error) {
-                console.error("Login Error:", error.response?.data || error);
+            );
+    
+            console.log("Response:", response.data);
+
+            if (response.status === 200) {
+                alert("Login Successful!");
+               // localStorage.setItem("userEmail", email);  // Store email for later use
+               localStorage.setItem("userData", JSON.stringify(response.data.user));
+                localStorage.setItem("token", response.data.token); // Store token for authentication   
+                
+                navigate('/login/Home'); // Redirect on success
+           
+            }
+    
+        } catch (error) {
+            console.error("Login Error:", error.response?.data || error);
+    
+            // Handle 404 (User not found)
+            if (error.response?.status === 404) {
+                alert("User not found! Please register first.");
+                navigate('/register');
+            } else {
                 alert(error.response?.data?.message || "Login Failed! Please check your credentials.");
             }
-        };
+        }
+    };
+    
         
 
     return (

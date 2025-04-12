@@ -27,9 +27,13 @@ border: none;
     display: flex;
     text-align: center;
     justify-content: center;
+ 
 }
 .Forget a {
-    text-decoration: none;
+    color: red;
+    font-size: 18px;
+    margin-right: 14px;
+    text-align: center;
 }
 .Login-Btn {
     color: white;
