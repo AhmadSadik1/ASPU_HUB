@@ -59,7 +59,7 @@ function Home() {
       fetchPosts();
     } catch (err) {
       console.error("Failed to publish post", err);
-      alert("Error: Couldn't add post.");
+      alert("Error: CouSFldn't add post.");
     }
   };
 
