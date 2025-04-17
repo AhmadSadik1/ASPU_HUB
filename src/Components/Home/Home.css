@@ -1,0 +1,136 @@
+/*
+  .My-Home {
+border: 2px solid rgba(88, 68, 68, 0.094);
+border-radius: 15px;
+margin-left: 50px;
+height: 10vw;
+display: flex;
+justify-content: center;
+width: 50%;
+margin-top: 15px;
+padding: 20px;
+}
+.My-Home .profile-personal {
+    width: 56px;
+    clip-path: circle(30%);
+    object-fit: cover;
+    margin-right: 30px;
+}
+.My-Home .Post-profile {
+    background-color: rgba(133, 127, 127, 0.094);
+    width: 90%;
+    color: black;
+    outline:none; 
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 50px; /* Set desired height */
+   /*
+    font-size: 14px; /* Adjust text size */
+/*}
+.My-Home .Icons-Home {
+position: absolute;
+right: 50%;
+bottom: 67%;
+cursor: pointer;
+display: flex;
+align-items: center;
+flex-direction: row;
+gap: 20px;
+color: blue;
+}
+
+.Getting {
+    margin-bottom: 20px;
+}
+.First-post {
+    margin-left: 50px;
+    padding: 20px;
+}
+.Box {
+    display: flex;
+    flex-direction: column;
+}
+.Coding {
+    display: flex;
+    justify-content: space-between;
+}
+.Language {
+    color: rgba(204, 204, 255, 0.863);
+}
+.PublishPost {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.posts-container {
+  max-width: max-content;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.post-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .post-title {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .post-content {
+    color: #34495e;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .post-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  /* Post styling */
+  /*
+.post-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .post-title {
+    color: #1a73e8; /* Google blue */
+    /*
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f1f1; /* Separation line */
+  /*}
+  
+  .post-content {
+    color: #3c4043; /* Dark gray */
+    /*
+    font-size: 1rem;
+    line-height: 1.6;
+    padding-top: 12px;
+    margin-top: 0;
+  }
+  
+  .post-box:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+  }
+  
+  */

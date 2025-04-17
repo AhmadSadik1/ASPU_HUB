@@ -1,0 +1,37 @@
+.Disappointed {
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+    color: blue;
+    }
+    .Disappointed span {
+        background-color: rgb(145, 145, 252);
+        padding: 10px;
+        width: 20%;
+        text-align: center;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .Language {
+        color: blue;
+    }
+    .profile-personal {
+        width: 56px;
+        clip-path: circle(30%);
+        object-fit: cover;
+        margin-right: 10px;
+    }
+    .PersonalPost {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .AccName {
+        margin-right: 25px;
+    }
+    .FollowUser {
+        color: blue;
+        cursor: pointer;
+    }
