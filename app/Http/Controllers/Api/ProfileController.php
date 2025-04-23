@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Models\User;
 use App\Models\Post;
+use App\Notifications\NewMessageNotification;
 class ProfileController extends Controller
 {
     public function getProfile(Request $request)
@@ -123,10 +124,12 @@ public function AddComment(Request $data){
             'positive_votes' => 0,
             'negative_votes' => 0,
         ]);
+        $postOwner = $comment->post->user;
+        $postOwner->notify(new NewMessageNotification($comment));
     
         return response()->json([
             'message' => 'تم إضافة التعليق بنجاح',
-            'comment' => $comment
+            "user"=>$comment->post->user
         ], 201);
     }
     

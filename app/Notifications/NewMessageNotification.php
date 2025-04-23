@@ -6,20 +6,17 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
-
+use App\Models\Comment;
 class NewMessageNotification extends Notification
 {
     use Queueable;
      /**
      * Create a new notification instance.
      */
-    protected $message_body;
-    protected $message_title;
-    public function __construct($message_title,$message_body)
+    protected Comment $comment;
+    public function __construct(Comment $comment)
     {
-        $this->message_body=$message_body;
-        $this->message_title=$message_title;
-        
+      $this->comment=$comment;
     }
 
     /**
@@ -57,8 +54,8 @@ class NewMessageNotification extends Notification
     public function toDatabase($notifiable)
 {
     return [
-        'title' =>$this->message_title,
-        'body' => $this->message_body,
+        'title' =>'تعليق جديد',
+        'body' => 'قام ' . $this->comment->user->first_name . ' بالتعليق على منشورك',
        
     ];
 }
