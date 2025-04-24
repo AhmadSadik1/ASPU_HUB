@@ -5,8 +5,10 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comment;
+use App\Models\Subject;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\UserSubject;
 use App\Notifications\NewMessageNotification;
 class ProfileController extends Controller
 {
@@ -133,5 +135,30 @@ public function AddComment(Request $data){
         ], 201);
     }
     
+}
+public function Get_user_subject(Request $data) {
+    $user = $data->user();
+
+    $subjects = $user->userSubjects()->with('subject')->get()->pluck('subject');
+
+    return response()->json($subjects, 200);
+}
+public function Add_new_subject(Request $data){
+$user=$data->user();
+$subject_id=$data->subject_id;
+UserSubject::create([
+    'userID' => $user->id,
+    'subectID' => $data->subject_id,
+    'has_been_finished' => $data->has_been_finished,
+    'has_been_canceled' => $data->has_been_canceld,
+    'mark' =>$data->mark // أو $request->user_id حسب السياق
+  
+]);
+return response()->json(["message"=>"subject Added succefully"], 200);
+}
+public function Get_subject_info(Request $data){
+    $subject_id=$data->header('subject_id');
+    $Subject=Subject::where('id',$subject_id)->first('Description');
+    return response()->json($Subject, 200);
 }
 }

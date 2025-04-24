@@ -69,13 +69,12 @@ class User extends Authenticatable
 
     public function userSubjects()
     {
-        return $this->hasMany(UserSubject::class);
+        return $this->hasMany(UserSubject::class,'userID');
     }
     public function posts()
     {
-        return $this->morphMany(Post::class, 'location');
+        return $this->hasMany(Post::class);
     }
-    
     public function Subscribe_Communities() {
     return $this->hasMany(Subscribe_Communities::class, 'user_id');   
     }

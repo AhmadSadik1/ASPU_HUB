@@ -56,6 +56,9 @@ Route::post('post/Add',[PostController::class,'Addpost'] );
     Route::get('Getusercomment', [ProfileController::class,'getUserComments']);
     Route::put('VotePost', [ProfileController::class,'votePost']);
     Route::post('Get_Comuuinty_post', [CummunityController::class,'Get_All_Post']);
+    Route::get('Get_user_subject', [ProfileController::class,'Get_user_subject']);
+    Route::post('Add_new_subject', [ProfileController::class,'Add_new_subject']);
+    Route::get('Get_subject_info', [ProfileController::class,'Get_subject_info']);
     });
 });
 
