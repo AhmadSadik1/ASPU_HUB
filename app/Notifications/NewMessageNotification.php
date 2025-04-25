@@ -55,7 +55,7 @@ class NewMessageNotification extends Notification
     return [
         'title' =>'تعليق جديد',
         'body' => 'قام ' . $this->comment->user->first_name . ' بالتعليق على منشورك',
-       
+        'comment'=>$this->comment
     ];
 }
 }
