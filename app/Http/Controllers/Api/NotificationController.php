@@ -13,6 +13,7 @@ class NotificationController extends Controller
             return [
                 'title' => $notification->data['title'],
                 'body' => $notification->data['body'],
+                'comment'=>$notification->data['comment']
             ];
         });
         return response()->json($notifications, 200);
