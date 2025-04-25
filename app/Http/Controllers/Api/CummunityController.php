@@ -10,6 +10,7 @@ use App\Models\Photo;
 use App\Models\Video;
 use App\Models\Comment;
 use Illuminate\Support\Facades\Hash;
+use App\Notifications\NewMessageNotification;
 class CummunityController extends Controller
 {
     public function Add_Post(){
@@ -66,6 +67,8 @@ class CummunityController extends Controller
             'positive_votes' => 0,
             'negative_votes' => 0,
         ]);
+        $postOwner = $comment->post->user;
+        $postOwner->notify(new NewMessageNotification($comment));
     
         return response()->json([
             'message' => 'تم إضافة التعليق بنجاح',

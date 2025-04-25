@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class UserSubject extends Model
 {
     use HasFactory;
-
+    protected $table='user_subjects';
 
     protected $fillable = [
         'specialization_id',
@@ -17,6 +17,11 @@ class UserSubject extends Model
         'description',
         'partical_mark',
         'abstract_mark',
+        'userID',
+        'subectID',
+        'has_been_finished',
+        'has_been_canceled',
+        'mark'
     ];
 
     public function specialization()
@@ -37,7 +42,7 @@ class UserSubject extends Model
 
     public function subject()
     {
-        return $this->belongsTo(Subject::class);
+        return $this->belongsTo(Subject::class,'subectID');
     }
 
     public function previousSubjects()
