@@ -126,10 +126,10 @@ public function AddComment(Request $data){
             'positive_votes' => 0,
             'negative_votes' => 0,
         ]);
-        // if($comment->post->user->id!=$comment->user->id){
+        if($comment->post->user->id!=$comment->user->id){
         $postOwner = $comment->post->user;
         $postOwner->notify(new NewMessageNotification($comment));
-        // }
+        }
        
         return response()->json([
             'message' => 'تم إضافة التعليق بنجاح',
