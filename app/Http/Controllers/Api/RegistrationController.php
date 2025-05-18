@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Subscribe_Communities;
+use App\Models\UserSemester;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -38,8 +40,21 @@ class RegistrationController extends Controller
             'roleID' => $roleMapping[$request->role],
             'email_verification_code' => $verificationCode,
         ]);
-
-      
+        if ($user->roleID == 1) {
+            $userSubjects = $user->userSubjects;
+            $com=$user->Subscribe_Communities;
+            if ($userSubjects->isEmpty()&& $com->isEmpty()) {
+                UserSemester::create([
+                    'userID'=>$user->id,
+                    'semester_number'=>1,
+                    'start_date'=>now()
+                ]);
+                Subscribe_Communities::create([
+                    'community_id' => 1,
+                    'user_id' => $user->id
+                ]);
+            }
+        }
         Mail::raw("Your email verification code is: $verificationCode", function ($message) use ($request) {
             $message->to($request->email)
                     ->subject('Email Verification Code');
@@ -47,9 +62,10 @@ class RegistrationController extends Controller
 
         return response()->json([
             'message' => 'User registered successfully. Check your email for the verification code.',
+            $userSubjects
 
         ], 201);
-        return response()->json(['messag'=>"user created succefully",$user], 200);
+        
     }
 
     public function verifyEmail(Request $request)

@@ -38,20 +38,17 @@ class PostController extends Controller
             foreach ($request->file('images') as $image) {
                 $imageName = time() . '_' . $image->getClientOriginalName();
                 $path = $image->storeAs('posts', $imageName, 'public');
-    
                 Photo::create([
                     'post_id' => $post->id,
                     'photo' => $path,
                 ]);
             }
         }
-    
         return response()->json([
             'message' => 'تم إنشاء البوست بنجاح مع الصور',
             'post' => $post->load('photos')
         ], 201);
     }
-   
     public function GetAllPost(Request $data){
 
         $user = $data->user();

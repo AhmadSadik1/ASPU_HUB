@@ -23,7 +23,7 @@ class StudentAuthController extends Controller
         $student = User::where('email', $request->email)
             ->where('roleID', 1) // student in database (roles)
             ->first();
-
+    
         if (!$student || !Hash::check($request->password, $student->password)) {
             return response()->json(['error' => 'Invalid credentials'], 401);
         }
@@ -34,7 +34,15 @@ class StudentAuthController extends Controller
         }
 
         $token = $student->createToken('student_token', ['student'])->plainTextToken;
-
+       
+            $userSubjects = $student->userSubjects;
+            $Subscribe_Communities=$student->Subscribe_Communities;
+            if ($userSubjects->isEmpty() && $Subscribe_Communities->isEmpty()) {
+                Subscribe_Communities::create([
+                    'community_id' => 1,
+                    'user_id' => $user->id
+                ]);
+        }
         return response()->json(['token' => $token]);
     }
 
