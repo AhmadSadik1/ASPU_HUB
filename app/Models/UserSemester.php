@@ -9,6 +9,10 @@ class UserSemester extends Model
 {
     use HasFactory;
 
+     
+    protected $fillable = ['userID', 'SpecializationID','start_date','end_date','semester_number','semester_hours','year_degree'];
+
+
  protected $fillable = [
         'userID',
         'SpecializationID',
@@ -18,6 +22,7 @@ class UserSemester extends Model
         'semester_hours',
         'year_degree',
     ];
+
 
 
 

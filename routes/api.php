@@ -9,8 +9,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\VerificationController;
 use App\Http\Controllers\Api\RegistrationController;
 use App\Http\Controllers\Api\PasswordResetCodeController;
+
+use App\Http\Controllers\Api\CummunityController;
+use App\Http\Controllers\Api\NotificationController;
+
 use App\Http\Controllers\Api\UserSubjectController;
 use App\Http\Controllers\Api\SubjectController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -37,6 +42,7 @@ Route::get('/user', function (Request $request) {
 Route::prefix('student')->group(function () {
 
     Route::post('/login', [StudentAuthController::class, 'login'])->name('login');
+
     Route::middleware('auth:student')->group(function () {
         Route::post('/logout', [StudentAuthController::class, 'logout']);
         Route::get('/dashboard', [StudentAuthController::class, 'dashboard']);
@@ -44,7 +50,9 @@ Route::prefix('student')->group(function () {
 Route::post('/password/send-code', [PasswordResetCodeController::class, 'sendResetCode'])
     ->name('password.send.code');
 Route::post('/password/reset', [PasswordResetCodeController::class, 'verifyCodeAndResetPassword'])
-    ->name('password.reset.submit');
+    ->name('password.reset.submit');  
+Route::post('create_notification', [NotificationController::class,'create_notification']);
+Route::get('get_all_notification', [NotificationController::class,'get_all_notification']);
 Route::get('post/get',[PostController::class,'GetAllPost'] );
 Route::post('post/Add',[PostController::class,'Addpost'] );
     Route::post('AddComment', [ProfileController::class,'AddComment']);
@@ -53,12 +61,19 @@ Route::post('post/Add',[PostController::class,'Addpost'] );
     Route::get('Getusercomment', [ProfileController::class,'getUserComments']);
     Route::put('VotePost', [ProfileController::class,'votePost']);
 
+    Route::post('Get_Comuuinty_post', [CummunityController::class,'Get_All_Post']);
+    Route::get('Get_user_subject', [ProfileController::class,'Get_user_subject']);
+    Route::post('Add_new_subject', [ProfileController::class,'Add_new_subject']);
+    Route::get('Get_subject_info', [ProfileController::class,'Get_subject_info']);
+
+
 
 
     Route::get('/subjects/selectable', action: [UserSubjectController::class, 'getSelectableSubjects']);
     Route::post('/subjects/submit', [UserSubjectController::class, 'storeUserSubjects']);
     Route::get('/available-subjects', [UserSubjectController::class, 'getAvailableSubjectsToSelect']);
     Route::post('/confirm-subjects', [UserSubjectController::class, 'confirmSelectedSubjectsThisSemester']);
+
 
 
 

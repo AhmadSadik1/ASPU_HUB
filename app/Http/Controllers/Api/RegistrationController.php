@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Subscribe_Communities;
+
 use App\Models\UserSemester;
 use App\Models\Specialization;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -30,8 +33,32 @@ class RegistrationController extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
-        // Role and specialization mappings
+    
         $roleMapping = ['student' => 1, 'admin' => 2, 'superadmin' => 3];
+
+        $verificationCode = random_int(1000, 9999);
+
+        $user = User::create([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'roleID' => $roleMapping[$request->role],
+            'email_verification_code' => $verificationCode,
+        ]);
+       
+        Mail::raw("Your email verification code is: $verificationCode", function ($message) use ($request) {
+            $message->to($request->email)
+                    ->subject('Email Verification Code');
+        });
+
+        return response()->json([
+            'message' => 'User registered successfully. Check your email for the verification code.',
+            $userSubjects
+
+        ], 201);
+        
+
         $specializationMapping = [
             'global information technology' => 1,
             'software' => 2,
@@ -62,7 +89,7 @@ class RegistrationController extends Controller
             ]);
 
             // Create user semester
-            UserSemester::create([
+          UserSemester::create([
                 'userID' => $user->id,
                 'SpecializationID' => $specialization_id,
                 'start_date' => now()->toDateString(),
@@ -71,7 +98,32 @@ class RegistrationController extends Controller
                 'semester_hours' => 0,
                 'year_degree' => 0,
             ]);
-
+ if ($user->roleID == 1) {
+            $userSubjects = $user->userSubjects;
+            $com=$user->Subscribe_Communities;
+            if ($specialization_id==1) {
+              
+                Subscribe_Communities::create([
+                    'community_id' => 1,
+                    'user_id' => $user->id
+                ]);
+            }
+           else if($specialization_id==2)
+           {
+              'community_id' => 2,
+                    'user_id' => $user->id
+           }
+    else if($specialization_id==3)
+           {
+              'community_id' => 3,
+                    'user_id' => $user->id
+           }
+    else if($specialization_id==4)
+           {
+              'community_id' => 4,
+                    'user_id' => $user->id
+           }
+        }
             // Send verification email
             Mail::raw("Your email verification code is: $verificationCode\n\nThis code will expire in 24 hours.", function ($message) use ($request) {
                 $message->to($request->email)->subject('Email Verification Code');
@@ -90,6 +142,7 @@ class RegistrationController extends Controller
                 'error' => 'Registration failed: ' . $e->getMessage()
             ], 500);
         }
+
     }
 
     public function verifyEmail(Request $request)
