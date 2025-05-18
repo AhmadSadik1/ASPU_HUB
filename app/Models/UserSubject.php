@@ -11,6 +11,7 @@ class UserSubject extends Model
     protected $table='user_subjects';
 
     protected $fillable = [
+
         'specialization_id',
         'name',
         'hours_count',
@@ -29,25 +30,26 @@ class UserSubject extends Model
         return $this->belongsTo(Specialization::class);
     }
 
-    public function userSubjects()
-    {
-        return $this->hasMany(UserSubject::class);
-    }
+
 
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'userID' );
     }
 
     public function subject()
     {
+
         return $this->belongsTo(Subject::class,'subectID');
+
     }
 
-    public function previousSubjects()
+
+
+    public function semester()
     {
-        return $this->hasMany(PreviousSubjects::class);
+        return $this->belongsTo(UserSemester::class, 'semesterID');
     }
 
     public function docs()
