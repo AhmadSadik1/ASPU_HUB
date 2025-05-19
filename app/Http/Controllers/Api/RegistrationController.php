@@ -42,13 +42,10 @@ class RegistrationController extends Controller
         ]);
         if ($user->roleID == 1) {
             $userSubjects = $user->userSubjects;
+            
             $com=$user->Subscribe_Communities;
             if ($userSubjects->isEmpty()&& $com->isEmpty()) {
-                UserSemester::create([
-                    'userID'=>$user->id,
-                    'semester_number'=>1,
-                    'start_date'=>now()
-                ]);
+               
                 Subscribe_Communities::create([
                     'community_id' => 1,
                     'user_id' => $user->id
