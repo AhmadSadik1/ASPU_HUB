@@ -46,7 +46,7 @@ class RegistrationController extends Controller
             'roleID' => $roleMapping[$request->role],
             'email_verification_code' => $verificationCode,
         ]);
-       
+
         Mail::raw("Your email verification code is: $verificationCode", function ($message) use ($request) {
             $message->to($request->email)
                     ->subject('Email Verification Code');
@@ -110,18 +110,24 @@ class RegistrationController extends Controller
             }
            else if($specialization_id==2)
            {
-              'community_id' => 2,
+                   Subscribe_Communities::create([
+                    'community_id' => 2,
                     'user_id' => $user->id
+                ]);
            }
     else if($specialization_id==3)
            {
-              'community_id' => 3,
+               Subscribe_Communities::create([
+                    'community_id' => 3,
                     'user_id' => $user->id
+                ]);
            }
     else if($specialization_id==4)
            {
-              'community_id' => 4,
+              Subscribe_Communities::create([
+                    'community_id' => 4,
                     'user_id' => $user->id
+                ]);
            }
         }
             // Send verification email

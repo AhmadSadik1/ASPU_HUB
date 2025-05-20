@@ -1,18 +1,19 @@
 <?php
-
 namespace App\Http\Controllers\Api;
-
 use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
+use App\Models\Subject;
+use App\Models\Subscribe_Communities;
+use App\Models\Specialization;
+use App\Models\UserSubject;
+use App\Models\UserSemester;
 class StudentAuthController extends Controller
 {
     //when register give role to the user
-
     public function login(Request $request)
     {
         $request->validate([
@@ -32,22 +33,9 @@ class StudentAuthController extends Controller
         if (!$student->email_verified_at) {
             return response()->json(['error' => 'Email not verified. Please verify your email address.'], 403);
         }
-
         $token = $student->createToken('student_token', ['student'])->plainTextToken;
-       
-            $userSubjects = $student->userSubjects;
-            $Subscribe_Communities=$student->Subscribe_Communities;
-            if ($userSubjects->isEmpty() && $Subscribe_Communities->isEmpty()) {
-                Subscribe_Communities::create([
-                    'community_id' => 1,
-                    'user_id' => $user->id
-                ]);
-        }
         return response()->json(['token' => $token]);
     }
-
-
-
     public function logout(Request $request)
     {
         $request->user()->tokens()->delete();
@@ -62,8 +50,4 @@ class StudentAuthController extends Controller
         return response()->json(['message' => 'Logged out successfully']);
 
     }
-
-
-
-
 }

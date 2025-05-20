@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers\Api;
-
 use App\Models\Student;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,7 +8,6 @@ use App\Models\SuperAdmin;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
 class SuperAdminAuthController extends Controller
 {
         //when register give role to the user
@@ -28,7 +25,6 @@ class SuperAdminAuthController extends Controller
         if (!$superAdmin || !Hash::check($request->password, $superAdmin->password)) {
             return response()->json(['error' => 'Invalid credentials'], 401);
         }
-
         $token = $superAdmin->createToken('superAdmin_token', ['admin'])->plainTextToken;
 
         return response()->json(['token' => $token]);
