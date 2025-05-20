@@ -92,7 +92,7 @@ public function Change_student_Specialization(Request $data)  {
             'ai' => 4,
         ];
 
-     $specialization_id = $specializationMapping[strtolower($request->specialization)];
+     $specialization_id = $specializationMapping[strtolower($data->specialization)];
     
       if ($specialization_id==1) {
               
