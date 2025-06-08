@@ -1,6 +1,6 @@
 /bootstrap/compiled.php
 /vendor
-
+storage/.*
 
 
 
@@ -24,5 +24,3 @@ composer.phar
 
 /node_modules
 
-
-.env

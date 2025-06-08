@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+
 use Laravel\Sanctum\HasApiTokens;
 
 
@@ -32,6 +33,8 @@ class User extends Authenticatable
         'number_of_completed_hours'
 
 
+
+
     ];
 
     protected $hidden = [
@@ -42,6 +45,8 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'is_blocked' => 'boolean',
+
+
     ];
 
 
@@ -102,5 +107,20 @@ class User extends Authenticatable
     public function Subscribe_Communities() {
     return $this->hasMany(Subscribe_Communities::class, 'user_id');
     }
+
+
+    public function managedCommunities()
+{
+    return $this->belongsToMany(Communitie::class, 'community__managers', 'user_id', 'community_id');
+}
+
+
+    public function isAdmin(): bool
+    {
+
+        return $this->roleID === 2;
+    }
+
+    
 }
 

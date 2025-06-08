@@ -10,6 +10,6 @@ class Communitie extends Model
     use HasFactory;
     public function posts()
     {
-        return $this->morphMany(Post::class, 'location');
+        return $this->hasMany(Post::class, 'community_id');
     }
 }

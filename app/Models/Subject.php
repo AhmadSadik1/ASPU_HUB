@@ -11,11 +11,12 @@ class Subject extends Model
 
     protected $fillable = [
         'name',
-        'hour_count', // تأكد من تعبئة هذا الحقل
+        'hour_count',
         'Description',
-        'paraticalMark', // مطابق لحالة الأحرف في DB
-        'abstractMark',  // مطابق لحالة الأحرف في DB
-        'SpecializationID'
+        'paraticalMark',
+        'abstractMark',
+        'SpecializationID',
+        'status'
     ];
 
     public function specialization()

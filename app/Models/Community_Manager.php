@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Community_Manager extends Model
 {
     use HasFactory;
+
+    protected $table = 'community__managers';
 }

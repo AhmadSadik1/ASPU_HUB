@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-// app/Models/Comment.php
 class Comment extends Model
 {
     use HasFactory;
@@ -14,32 +15,42 @@ class Comment extends Model
         'content',
         'post_id',
         'user_id',
-        'positive_votes',
-        'negative_votes',
         'parent_comment_id',
+        'positive_votes',
+        'negative_votes', 
     ];
 
-    public function user()
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
-  #  public function post()
-   # {
-    #    return $this->belongsTo(Post::class);
-    #}
+    public function post(): BelongsTo
+    {
+        return $this->belongsTo(Post::class);
+    }
 
-    public function parentComment()
+    public function replies(): HasMany
+    {
+        return $this->hasMany(Comment::class, 'parent_comment_id');
+    }
+
+    public function parentComment(): BelongsTo
     {
         return $this->belongsTo(Comment::class, 'parent_comment_id');
     }
 
-    public function childComments()
+    /**
+     * Get all of the votes for the comment.
+     */
+    public function commentVotes(): HasMany // استخدمت commentVotes لتجنب أي التباس
     {
-        return $this->hasMany(Comment::class, 'parent_comment_id');
+        return $this->hasMany(CommentVote::class);
     }
-    public function post(){
-        return $this->belongsTo(post::class);
-    }
-}
 
+
+    public function reports()
+{
+    return $this->morphMany(Report::class, 'reportable');
+}
+}
