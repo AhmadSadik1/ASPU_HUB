@@ -24,3 +24,8 @@ composer.phar
 
 /node_modules
 
+
+.env
+venv
+requirements.txt
+chroma_db_lg/

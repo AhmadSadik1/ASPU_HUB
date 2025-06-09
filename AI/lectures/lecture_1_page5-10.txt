@@ -1,0 +1,114 @@
+--رقم الصفحة:-- 1
+```markdown
+# المحتوى الرئيسي
+
+Goals -4-
+
+Search engines allow us to search for information automatically.
+
+*   Speed of searching
+*   Quality of sources
+*   Reducing the cost of searching
+*   Access to very large amounts of information
+
+٦
+
+## وصف الصورة
+
+صورة 1: تظهر الصورة روبوتا يقف امام مكتبة مليئة بالملفات. يوضح الروبوت اهمية محركات البحث في الوصول للمعلومات.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 2
+```markdown
+# الاهداف
+
+Goals -5-
+
+Search Engines
+changed the world!
+
+IR is the field that
+changed the world!
+
+Information retrieval
+systems are the
+technology or science
+behind search engines.
+
+v
+
+## وصف الصورة
+
+صورة 1: تعرض الصفحة شريحة عرض تقديمي بعنوان "Goals -5-". تحتوي الشريحة على مربعي نص أخضرين مكتوب عليهما "Search Engines changed the world!" و "IR is the field that changed the world!". بالإضافة إلى ذلك، يوجد نص يشير إلى أن أنظمة استرجاع المعلومات هي التكنولوجيا أو العلم وراء محركات البحث.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 3
+```markdown
+# تطبيق نظم استرجاع المعلومات
+
+IR is NOT just
+
+Google
+
+What are the applications of
+information retrieval systems in
+our daily life?
+
+Information retrieval is not just
+Google
+
+B
+facebook
+f
+
+## وصف الصورة
+
+صورة 1: صورة تعرض كلمة "Google" بألوانها المميزة وعبارة "IR is NOT just"  بهدف توضيح ان استرجاع المعلومات ليس فقط جوجل.
+
+صورة 2: صورة تتضمن مجموعة من ايقونات وسائل التواصل الاجتماعي مرتبة على شكل مكعب روبيك لتوضيح تطبيقات استرجاع المعلومات.
+
+## الاسئلة
+
+What are the applications of
+information retrieval systems in
+our daily life?
+
+Information retrieval is not just
+Google
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 4
+```markdown
+# تطبيق نظم استرجاع المعلومات -2-
+
+IR is NOT just the search box!
+
+Not just a text search on Google.
+
+## وصف الصورة
+
+صورة 1: تعرض الصورة لقطة شاشة لواجهة محرك البحث جوجل. تظهر الواجهة شعار جوجل وشريط البحث. يهدف هذا التمثيل المرئي إلى التأكيد على أن استرجاع المعلومات ليس مجرد استخدام بسيط لمحرك بحث مثل جوجل.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 5
+```markdown
+# تطبيق نظام استرجاع المعلومات -3-
+
+## وصف الصورة
+
+صورة 1: رسم توضيحي يظهر مصطلح "وسائل التواصل الاجتماعي" مكبرا بعدسة مكبرة، مما يسلط الضوء على اهميتها.
+
+صورة 2: لقطة شاشة لموقع Twittorati الذي يعرض روابط مختلفة مثل التغريدات والمدونات الشائعة وأحدث الصور.
+
+* microblog search:
+
+* Search micro blogs
+
+* like search social media
+```
+-----------------------------------------
+

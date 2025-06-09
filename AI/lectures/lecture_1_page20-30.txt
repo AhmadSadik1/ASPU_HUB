@@ -1,0 +1,214 @@
+--رقم الصفحة:-- 20
+```markdown
+## وصف الصورة
+
+صورة 1: الصورة عبارة عن لقطة مقربة لساعة حائط. على وجه الساعة يوجد النص "come on time" باللونين الأسود والأحمر. عقرب الدقائق يشير إلى وقت متأخر قليلا. الخلفية تتكون من سطح خشبي.
+
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 21
+```markdown
+# مصادر
+
+* Lecture slides
+* Readings
+    * Introduction to Information Retrieval, by C. Manning, P. Raghavan, and H. Schütze, 2008.
+    * Search Engines: Information Retrieval in Practice, by W. Bruce Croft, D. Metzler, and T. Strohman, 2010.
+    * An introduction to Neural Information Retrieval, by Bhaskar Mitra and Nick Craswell, 2018.
+    * Pretrained Transformers for Text Ranking: BERT and Beyond, by Jimmy Lin, Rodrigo Nogueira, and Andrew Yates, 2020.
+* Lab notebooks
+
+## وصف الصورة
+
+صورة 1: تعرض الصفحة قائمة بمصادر المعلومات، بما في ذلك عروض الشرائح والمقالات العلمية ودفاتر المختبر.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 22
+```markdown
+# المتطلبات الأساسية
+
+* No prior knowledge of IR is required.
+* At least, undergrad-level courses
+    * Programming (Python)
+    * Data structures or Algorithms
+    * Basic Probability theory
+    * Basic Linear algebra
+
+## وصف الصورة
+
+صورة 1: الصفحة عبارة عن شريحة عرض تقديمي من كتاب مدرسي. تعرض الشريحة عنوانا رئيسيا "المتطلبات الأساسية" ثم سرد لمتطلبات إضافية.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 23
+```markdown
+# مخطط اليوم
+
+* Introduction to IR
+* How IR "sees" documents?
+* Boolean retrieval
+
+## وصف الصورة
+
+صورة 1: تظهر الصورة طريقا أسود متعرجا يمر عبر منظر طبيعي اخضر. يمكن ان يكون الطريق يمثل مخطط اليوم.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 24
+```markdown
+# Introduction to IR
+
+## وصف الصورة
+
+صورة 1: تعرض الصورة مجموعة من شعارات محركات البحث القديمة مثل Yahoo, MSN, AOL, Excite, Lycos و Altavista.
+
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 25
+```markdown
+# مفهوم الاسترجاع
+
+## IR in a nutshell
+
+## وصف الصورة
+
+صورة 1: رسم توضيحي يوضح عملية استرجاع المعلومات. تظهر الصورة مجموعة من المستندات، واستعلاما يرسل الى محرك البحث، ومستندات ذات صلة يتم استرجاعها. يوجد ايضا رسم لشخص يقف بجوار علامة استفهام كبيرة.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 26
+```markdown
+# عنوان الصفحة
+
+IR, basic form
+
+Given Query q, find relevant documents ?
+
+search results D
+
+# وصف الصورة
+
+## وصف الصورة
+
+صورة 1: تعرض الصفحة صورة لشاشة نتائج بحث جوجل عند البحث عن "donald trump". توضح الصورة واجهة البحث مع مربع البحث الذي يحتوي على عبارة "donald trump". تظهر نتائج البحث المختلفة، بما في ذلك الأخبار ومقاطع الفيديو وروابط لمواقع ويب مثل سيرة دونالد ترامب وحسابه على تويتر. تعرض الصورة أيضًا صورًا لدونالد ترامب ومعلومات موجزة عنه. الصورة توضح مثالا اساسيا عن عملية استرجاع المعلومات.
+
+# المحتوى
+
+Google donald trump
+
+All News Images Maps More Settings Tools
+
+About 293,000,000 results (0.79 seconds)
+
+Top stories
+
+Trume on Irma: 'We've never seen anything like this'
+
+CNN.com 1 hour ago
+
+→ More for donald trump
+
+Bound to No Party. Trump Upends 150 Years of Two-Party Rule
+
+The New York Times 19 h
+
+Hurricane Irma: Florida Keys hit by 'most catastrophic storm ever' - latest news
+
+The Telegraph 20 mins ago
+
+Donald Trump Biography. Trump Organization Hotel's Real Estate Golf...
+
+www.trump.com/blography/
+
+Donald J. Trump is the very definition of the American success story, continually setting the standards of excellence while expanding his interests in real estate,...
+
+Donald J. Trump (@realDonaldTrump) . Twitter
+
+https://twitter.com/realDonaldTrump
+
+Donald Trump
+
+45th U.S. President
+
+donald trump.com
+
+Donald John Trump is the 45th and current President of the United States, in office since January 20, 2017. Before entering politics, he was a businessman and television personality. Wikipedia
+
+Born: 11 June 1946 (age 71), Jamaica Hospital Medical Center
+
+Height: 1.88 m
+
+Net worth: 3.5 billion USD (2017) Forbes
+
+Spouse: Melania Trump (m. 2005), Marla Maples (m. 1993-1999), Ivana Trump (m. 1977-1992)
+
+Education: Wharton School of the University of Pennsylvania (1968),
+
+MORE
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 27
+```markdown
+# المحتوى الرئيسي
+
+Two main issues in IR
+
+About 293,000,000 results 0.79 seconds
+
+Effectiveness
+need to find relevant documents
+needle in a haystack
+very different from relational DBs (SQL)
+
+Efficiency
+need to find them quickly
+vast quantities of data (10's billions pages)
+thousands queries per second (Google, ~40,000)
+data constantly changes, need to keep up.
+
+# وصف الصورة
+
+صورة 1: تعرض الصفحة عنوانا رئيسيا يقول "Two main issues in IR" ثم تعرض قوائم تتعلق بفعالية وكفاءة استرجاع المعلومات. يظهر في الصورة عدد النتائج ومدة البحث.
+
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 28
+```markdown
+# IR main components
+
+## وصف الصورة
+
+صورة 1: توضح الصورة المكونات الرئيسية لنظام استرجاع المعلومات. يظهر فيها شخصية ثلاثية الابعاد تقف بجانب علامة استفهام حمراء كبيرة، تمثل الاستعلام (Query). توجد مجموعة من المستندات (Documents) تتدفق الى محرك البحث (Search Engine) مع الاستعلام. ثم تخرج من محرك البحث مستندات ذات صلة (Relevant Documents).
+
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 29
+```markdown
+# المستندات
+
+Document = the **element** to be **retrieved**
+* Unstructured nature
+* Unique ID
+* N documents --> Collection
+* web-pages, emails, book, page, sentence, tweets
+* photos, videos, musical pieces, code
+* answers to questions
+* product descriptions, advertisements
+* people
+
+# وصف الصورة
+
+صورة 1: تعرض الصورة مجموعة من ثلاث أوراق بيضاء مرتبة فوق بعضها البعض، ربما تمثل وثائق أو مستندات.
+
+# الاسئلة
+
+لا يوجد أسئلة في الصفحة المعروضة.
+```
+-----------------------------------------
+

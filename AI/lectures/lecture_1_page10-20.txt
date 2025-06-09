@@ -1,0 +1,287 @@
+--رقم الصفحة:-- 10
+```markdown
+# تطبيق IRS -4-
+
+* Text classification:
+
+## وصف الصورة
+
+صورة 1: رسم توضيحي يوضح تطبيق IRS -4- لتصنيف النصوص. تظهر الصورة ملفات بيانات نصية أولية تتفرع إلى ثلاث فئات: التكنولوجيا والرياضة والأزياء.
+
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 11
+```markdown
+# تطبيق نظم استرجاع المعلومات -5-
+
+## وصف الصورة
+
+صورة 1: تعرض نتائج بحث من موقع ExpertSearch.co.uk، حيث يعرض أسماء وأماكن عمل وأوصاف وظيفية لعدة خبراء.
+
+صورة 2: تعرض لقطة شاشة من موقع Samuel Ginn College of Engineering، مع محرك بحث عن أعضاء هيئة التدريس والخبرات.
+
+صورة 3: تعرض شرحا لميزة "Expert Search" تشير الى البحث عن الخبراء وليس الوثائق في مجال محدد.
+
+---
+
+Expert Search:
+
+Search for people (not documents) who are experts in a specific field and in a specific community with high confidence.
+
+EXPERT SEARCH.CO.UK
+
+There are 9 records matching your search request:
+
+Area of Expertise: Information Retrieval
+
+Your search took 0.260 seconds to perform.
+
+Name: Mr John Alcock
+
+Town/County: London
+
+Organisation: Bristows, Solicitors
+
+Occupation: Solicitor and European Patent/Trade Mark Attorney
+
+Name: Mr Matthew/Attia
+
+Town/County: Wigan, Lancs
+
+Organisation: Independent Drug Monitoring Unit (IDMU)
+
+Occupation: Drug Abuse Research & Information Consultant
+
+Name: Miss Annette Clarey
+
+Town/County: Slough, Berks
+
+Organisation: BioMark Forensics Ltd
+
+Occupation: Forensic Biologist
+
+Name: Mr Andrew Fox
+
+Town/County: Plymouth, Devon
+
+Organisation: Audax Digital Forensic
+
+Occupation: Computer Forensic Consultant
+
+FROMARK FORENSICS
+
+SAMUEL GINN
+COLLEGE OF ENGINEERING
+
+Faculty Expertise - Search
+
+Auburn Engineering Faculty Search Engine
+
+Computer Science and Software Engineering
+
+Information retrieval
+
+ANNAE GIBERT
+
+M.K. CARLISLE
+
+12
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 12
+```markdown
+# تطبيق IRS -6-
+
+Speech Search:
+
+Search for audio clips, not texts.
+
+## وصف الصورة
+
+صورة 1: صور متنوعة تعرض حالات مختلفة مثل عرض تلفزيوني، مقابلة مع أوبرا، اجتماع عمل، وتطبيق هاتف ذكي. يظهر ان التطبيق يحتمل ان يكون له علاقة بالبحث الصوتي او الملفات الصوتية.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 13
+```markdown
+# تطبيق نظام استرجاع المعلومات -7-
+
+* Conversational Search:
+* Automated answering of user questions in automated dialogue systems
+
+## وصف الصورة
+
+صورة 1: رسم توضيحي يظهر شخصًا يتحدث مع روبوت، مما يمثل مفهوم المحادثة بين الإنسان والآلة.
+
+صورة 2: صورة لهاتف ذكي يعرض واجهة مساعد افتراضي، حيث يسأل المساعد "What can I help you with?".
+
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 14
+```markdown
+# تطبيق اي ار اس -8-
+
+## وصف الصورة
+
+صورة 1: تعرض لقطة شاشة من قسم "من تتابع" على تويتر، تعرض حسابات مقترحة للمتابعة مثل "سكاي نيوز عربية" وحسابات أخرى.
+
+صورة 2: تعرض لقطة شاشة من قسم "موصى به لك" على موقع امازون، تعرض منتجات مختلفة مثل الكتب وتطبيقات جوجل.
+
+صورة 3: تعرض لقطة شاشة من قسم "العملاء الذين شاهدوا هذا المنتج شاهدوا أيضا" على موقع امازون، تعرض مجموعة من الكتب المتعلقة بالتعلم العميق والذكاء الاصطناعي.
+
+Recommendation :
+Recommendations,
+whether tracking people
+or recommending certain
+products.
+
+Who to follow Refresh - View all
+sky سكاي نيوز عربية @skyne... x
+NEWS عربية
+Follow
+
+boushra al-shehri @Bous... x
+Follow
+
+Followed by Kareem Darwish and
+others
+
+Majd Abbar @majdat
+Follow
+
+amazon.com
+Recommended for You
+Amazon.com has new recommendations for you based on items you purchased or told us you own.
+
+Customers who viewed this item also viewed
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 15
+```markdown
+# تطبيق اي ار اس -9-
+# اشياء في صفحة نتائج البحث!
+
+## وصف الصورة
+
+صورة 1: تعرض الصورة لقطة شاشة لنتائج بحث جوجل عن "haii". توجد عدة دوائر حمراء تحدد ميزات مختلفة في صفحة نتائج البحث ، بما في ذلك اقتراحات الاستعلام / التصحيح ومقتطفات الملخصات وفئات البحث. يعرض الجانب الأيمن من الصورة إعلانات "البحث المدفوع".
+
+## المحتوى
+
+Web Images Videos Maps News Shopping Gmail more -
+
+Google hati
+
+*   history of hati
+*   pictures of hati
+*   haitian culture
+*   hati climate
+*   hati economy
+Republic of hati
+*   hati food
+*   hati population
+*   hati poverty
+Welcome to the hati weather
+*   facts about h
+
+Search
+
+Sponsored Search
+
+Results 1-10 of about 32,890,000 for hati (0.32
+
+Latest News on Haiti
+
+Haiti Earthquake Relief
+
+Earthquake in Haiti
+
+Global Disasters Maps
+
+Aid Haiti Quake Victims
+
+Haiti News Summary
+
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 16
+```markdown
+# تطبيق نظام استرجاع المعلومات -10-
+
+## وصف الصورة
+
+صورة 1: تعرض الصورة لقطات شاشة لنتائج بحث مختلفة وعرض مرئي للمعلومات، ربما لتوضيح طرق عرض نتائج البحث.
+
+## المحتوى
+
+Information Visualization:
+How to display search results so that the user can benefit from these results in the best way
+
+۱۷
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 17
+```markdown
+# ما هو IRS؟
+
+IR is about technology
+to connect people to information
+
+## وصف الصورة
+
+صورة 1: تعرض الصفحة عنوانا "ما هو IRS؟" وتحته مربع نص اخضر مكتوب عليه "IR is about technology to connect people to information".
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 18
+```markdown
+# من يستخدمون نظم استرجاع المعلومات؟
+
+## وصف الصورة
+
+صورة 1: صورة تظهر زوجين يستخدمان جهاز كمبيوتر محمول.
+
+صورة 2: صورة تظهر مجموعة من الاطفال يستخدمون جهاز كمبيوتر محمول.
+
+صورة 3: صورة تظهر شخصا جالسا على مكتب مع جهاز كمبيوتر والعديد من الاوراق.
+
+صورة 4: صورة تظهر اشخاصا يستخدمون اجهزة الكمبيوتر في مكتبة.
+
+صورة 5: صورة تظهر جنديا يستخدم جهاز كمبيوتر في منطقة صحراوية.
+
+صورة 6: صورة تظهر مهندسا يستخدم جهاز لوحي امام مبنى.
+
+صورة 7: صورة تظهر رجلا يتحدث على الهاتف النقال.
+```
+-----------------------------------------
+
+--رقم الصفحة:-- 19
+```markdown
+# تنظيم المساق
+
+Duration & Daily Schedule
+*   3 “intensive” months!
+*   Every Sunday and Tuesday from today (Sunday November 21th) to Sunday January 26th
+
+| Time                     | Activity                     |
+| ------------------------ | ---------------------------- |
+| On Sunday 8:00 am-11:00 am | Lecture Part 1, Lecture Part 2 |
+| On Tuesday 8:00 am-11:00 am | Lecture Part 1, Lecture Part 2 |
+| On Sunday 12:30 pm-02:00 pm | Practical Session            |
+| On Sunday 02:00 pm-03:00 pm | Practical Session            |
+| On Tuesday 12:30 pm-02:00 pm | Practical Session            |
+| On Tuesday 02:00 pm-03:00 pm | Practical Session            |
+
+۲۰
+
+## وصف الصورة
+
+صورة 1: تعرض الصفحة معلومات حول تنظيم مساق دراسي. تحدد المدة الزمنية للمساق والجدول اليومي بما في ذلك الايام والاوقات للمحاضرات والجلسات العملية.
+```
+-----------------------------------------
+
