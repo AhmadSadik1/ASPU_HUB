@@ -1,27 +1,27 @@
---رقم الصفحة:-- 10
+---Page Number:-- 10
 ```markdown
-# تطبيق IRS -4-
+# IRS Application -4-
 
 * Text classification:
 
-## وصف الصورة
+## Image Description
 
-صورة 1: رسم توضيحي يوضح تطبيق IRS -4- لتصنيف النصوص. تظهر الصورة ملفات بيانات نصية أولية تتفرع إلى ثلاث فئات: التكنولوجيا والرياضة والأزياء.
+Image 1: An illustration showing IRS -4- application for text classification. The image shows raw text data files branching into three categories: Technology, Sports, and Fashion.
 
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 11
+---Page Number:-- 11
 ```markdown
-# تطبيق نظم استرجاع المعلومات -5-
+# Information Retrieval Systems Application -5-
 
-## وصف الصورة
+## Image Description
 
-صورة 1: تعرض نتائج بحث من موقع ExpertSearch.co.uk، حيث يعرض أسماء وأماكن عمل وأوصاف وظيفية لعدة خبراء.
+Image 1: Displays search results from ExpertSearch.co.uk, showing names, workplaces, and job descriptions of several experts.
 
-صورة 2: تعرض لقطة شاشة من موقع Samuel Ginn College of Engineering، مع محرك بحث عن أعضاء هيئة التدريس والخبرات.
+Image 2: Shows a screenshot from Samuel Ginn College of Engineering website, with a faculty member and expertise search engine.
 
-صورة 3: تعرض شرحا لميزة "Expert Search" تشير الى البحث عن الخبراء وليس الوثائق في مجال محدد.
+Image 3: Displays an explanation of the "Expert Search" feature indicating the search for experts rather than documents in a specific field.
 
 ---
 
@@ -45,7 +45,7 @@ Organisation: Bristows, Solicitors
 
 Occupation: Solicitor and European Patent/Trade Mark Attorney
 
-Name: Mr Matthew/Attia
+Name: Mr Matthew Attia
 
 Town/County: Wigan, Lancs
 
@@ -85,52 +85,51 @@ Information retrieval
 ANNAE GIBERT
 
 M.K. CARLISLE
-
 12
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 12
+---Page Number:-- 12
 ```markdown
-# تطبيق IRS -6-
+# IRS Application -6-
 
 Speech Search:
 
 Search for audio clips, not texts.
 
-## وصف الصورة
+## Image Description
 
-صورة 1: صور متنوعة تعرض حالات مختلفة مثل عرض تلفزيوني، مقابلة مع أوبرا، اجتماع عمل، وتطبيق هاتف ذكي. يظهر ان التطبيق يحتمل ان يكون له علاقة بالبحث الصوتي او الملفات الصوتية.
+Image 1: Various images showing different scenarios such as a TV show, an Oprah interview, a business meeting, and a smartphone app. It appears the application may be related to voice search or audio files.
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 13
+---Page Number:-- 13
 ```markdown
-# تطبيق نظام استرجاع المعلومات -7-
+# Information Retrieval System Application -7-
 
 * Conversational Search:
 * Automated answering of user questions in automated dialogue systems
 
-## وصف الصورة
+## Image Description
 
-صورة 1: رسم توضيحي يظهر شخصًا يتحدث مع روبوت، مما يمثل مفهوم المحادثة بين الإنسان والآلة.
+Image 1: An illustration showing a person talking to a robot, representing the concept of human-machine conversation.
 
-صورة 2: صورة لهاتف ذكي يعرض واجهة مساعد افتراضي، حيث يسأل المساعد "What can I help you with?".
+Image 2: An image of a smartphone displaying a virtual assistant interface, where the assistant asks "What can I help you with?"
 
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 14
+---Page Number:-- 14
 ```markdown
-# تطبيق اي ار اس -8-
+# IRS Application -8-
 
-## وصف الصورة
+## Image Description
 
-صورة 1: تعرض لقطة شاشة من قسم "من تتابع" على تويتر، تعرض حسابات مقترحة للمتابعة مثل "سكاي نيوز عربية" وحسابات أخرى.
+Image 1: Displays a screenshot of the "Who to follow" section on Twitter, showing suggested accounts to follow like "Sky News Arabia" and other accounts.
 
-صورة 2: تعرض لقطة شاشة من قسم "موصى به لك" على موقع امازون، تعرض منتجات مختلفة مثل الكتب وتطبيقات جوجل.
+Image 2: Shows a screenshot of the "Recommended for You" section on Amazon, displaying various products like books and Google applications.
 
-صورة 3: تعرض لقطة شاشة من قسم "العملاء الذين شاهدوا هذا المنتج شاهدوا أيضا" على موقع امازون، تعرض مجموعة من الكتب المتعلقة بالتعلم العميق والذكاء الاصطناعي.
+Image 3: Displays a screenshot of the "Customers who viewed this item also viewed" section on Amazon, showing a collection of books related to deep learning and artificial intelligence.
 
 Recommendation :
 Recommendations,
@@ -139,8 +138,8 @@ or recommending certain
 products.
 
 Who to follow Refresh - View all
-sky سكاي نيوز عربية @skyne... x
-NEWS عربية
+sky Sky News Arabia @skyne... x
+NEWS Arabia
 Follow
 
 boushra al-shehri @Bous... x
@@ -156,20 +155,19 @@ amazon.com
 Recommended for You
 Amazon.com has new recommendations for you based on items you purchased or told us you own.
 
-Customers who viewed this item also viewed
-```
+Customers who viewed this item also viewed```
 -----------------------------------------
 
---رقم الصفحة:-- 15
+---Page Number:-- 15
 ```markdown
-# تطبيق اي ار اس -9-
-# اشياء في صفحة نتائج البحث!
+# IRS Application -9-
+# Things on Search Results Page!
 
-## وصف الصورة
+## Image Description
 
-صورة 1: تعرض الصورة لقطة شاشة لنتائج بحث جوجل عن "haii". توجد عدة دوائر حمراء تحدد ميزات مختلفة في صفحة نتائج البحث ، بما في ذلك اقتراحات الاستعلام / التصحيح ومقتطفات الملخصات وفئات البحث. يعرض الجانب الأيمن من الصورة إعلانات "البحث المدفوع".
+Image 1: The image shows a Google search results screenshot for "haii". Several red circles highlight different features on the search results page, including query suggestions/corrections, summary snippets, and search categories. The right side of the image displays "Sponsored Search" ads.
 
-## المحتوى
+## Content
 
 Web Images Videos Maps News Shopping Gmail more -
 
@@ -204,65 +202,64 @@ Global Disasters Maps
 Aid Haiti Quake Victims
 
 Haiti News Summary
-
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 16
+---Page Number:-- 16
 ```markdown
-# تطبيق نظام استرجاع المعلومات -10-
+# Information Retrieval System Application -10-
 
-## وصف الصورة
+## Image Description
 
-صورة 1: تعرض الصورة لقطات شاشة لنتائج بحث مختلفة وعرض مرئي للمعلومات، ربما لتوضيح طرق عرض نتائج البحث.
+Image 1: The image displays screenshots of different search results and visual information displays, likely demonstrating various ways to present search results.
 
-## المحتوى
+## Content
 
 Information Visualization:
 How to display search results so that the user can benefit from these results in the best way
 
-۱۷
+17
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 17
+---Page Number:-- 17
 ```markdown
-# ما هو IRS؟
+# What is IRS?
 
 IR is about technology
 to connect people to information
 
-## وصف الصورة
+## Image Description
 
-صورة 1: تعرض الصفحة عنوانا "ما هو IRS؟" وتحته مربع نص اخضر مكتوب عليه "IR is about technology to connect people to information".
+Image 1: The page displays a title "What is IRS?" with a green text box below it containing the text "IR is about technology to connect people to information".
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 18
+---Page Number:-- 18
 ```markdown
-# من يستخدمون نظم استرجاع المعلومات؟
+# Who Uses Information Retrieval Systems?
 
-## وصف الصورة
+## Image Description
 
-صورة 1: صورة تظهر زوجين يستخدمان جهاز كمبيوتر محمول.
+Image 1: A picture showing a couple using a laptop computer.
 
-صورة 2: صورة تظهر مجموعة من الاطفال يستخدمون جهاز كمبيوتر محمول.
+Image 2: A picture showing a group of children using a laptop computer.
 
-صورة 3: صورة تظهر شخصا جالسا على مكتب مع جهاز كمبيوتر والعديد من الاوراق.
+Image 3: A picture showing a person sitting at a desk with a computer and several papers.
 
-صورة 4: صورة تظهر اشخاصا يستخدمون اجهزة الكمبيوتر في مكتبة.
+Image 4: A picture showing people using computers in a library.
 
-صورة 5: صورة تظهر جنديا يستخدم جهاز كمبيوتر في منطقة صحراوية.
+Image 5: A picture showing a soldier using a computer in a desert area.
 
-صورة 6: صورة تظهر مهندسا يستخدم جهاز لوحي امام مبنى.
+Image 6: A picture showing an engineer using a tablet in front of a building.
 
-صورة 7: صورة تظهر رجلا يتحدث على الهاتف النقال.
+Image 7: A picture showing a man talking on a mobile phone.
 ```
 -----------------------------------------
 
---رقم الصفحة:-- 19
+---Page Number:-- 19
 ```markdown
-# تنظيم المساق
+# Course Organization
 
 Duration & Daily Schedule
 *   3 “intensive” months!
@@ -279,9 +276,10 @@ Duration & Daily Schedule
 
 ۲۰
 
-## وصف الصورة
 
-صورة 1: تعرض الصفحة معلومات حول تنظيم مساق دراسي. تحدد المدة الزمنية للمساق والجدول اليومي بما في ذلك الايام والاوقات للمحاضرات والجلسات العملية.
+## Image Description
+
+Image 1: The page displays information about course organization. It specifies the course duration and daily schedule including days and times for lectures and practical sessions.
 ```
 -----------------------------------------
 

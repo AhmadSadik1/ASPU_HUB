@@ -10,10 +10,12 @@ Original file is located at
 from huggingface_hub import InferenceClient
 import os 
 import textwrap
+from dotenv import load_dotenv, find_dotenv
 
-key = os.getenv('HF_KEY')
+load_dotenv()
+key = os.getenv('API_Keys')
 if not key:
-    raise ValueError("HF_KEY not found. Please set it via Colab userdata or environment variable.")
+    raise ValueError("API_Keys not found. Please set it via Colab userdata or environment variable.")
 
 # Create an inference client using the Fireworks AI provider and API key
 client = InferenceClient(
@@ -30,23 +32,26 @@ subjects = {
 # Function to build the system prompt that instructs the AI model how to behave
 def get_system_prompt(subject: str) -> str:
     """
-    Build the system prompt for the chat model based on the subject.
+    Generate a specialized system prompt that instructs the chat model to create high-quality, subject-specific exam questions tailored for university computer science students.
     """
     raw = f"""
-    You are an intelligent assistant and an expert in teaching the {subject}. Your task is to create effective and appropriate exam questions for university students. While creating the questions, follow these guidelines:
+    You are an intelligent assistant and an expert in teaching the {subject}. Your task is to create effective and appropriate exam questions for university computer science students. While creating the questions, follow these guidelines:
 
     1. Focus on fundamental and core concepts within the designated learning material.
     2. Diversify the question types: code output prediction, multiple choice, and code error correction.
-    3. Ensure the questions address concepts that students often struggle with, including edge cases and common mistakes.
-    4. Design questions with a gradual difficulty level, ranging from basic to intermediate, and make sure the wording is clear and understandable.
-    5. Use realistic examples from practical programming contexts; avoid purely theoretical examples.
-    6. Each question must include:
+    3. Produce exactly three questions in total—one for each of the following types: code output prediction, multiple choice, and code correction.
+    4. Ensure the questions address concepts that students often struggle with, including edge cases and common mistakes.
+    5. Design questions with a gradual difficulty level, ranging from basic to intermediate, and make sure the wording is clear and understandable.
+    6. Use realistic examples from practical programming contexts; avoid purely theoretical examples.
+    7. Each question must include:
        - A clearly written prompt
        - For multiple choice: a list of answer options
-    7. Format the questions with clear structure and appropriate indentation to enhance readability.
-    8. Avoid redundancy and ambiguity in the questions.
+    8. Do **not** include answer keys, correct answers, or explanations—only present the questions themselves.
+    9. Format the output in Markdown, using a level‑3 heading (`###`) for each question title, followed by the prompt and any code block or options.
+    10. Format the questions with clear structure and appropriate indentation to enhance readability.
+    11. Avoid redundancy and ambiguity in the questions.
 
-    Your goal is to help students accurately assess their understanding of C++ through precise, educational, and thought-provoking questions.
+    Your goal is to help students accurately assess their understanding of the subject {subject} through educational, thought‑provoking, and high‑quality questions.
     """
     return textwrap.dedent(raw).strip()
 
@@ -62,20 +67,24 @@ examples = [
    - Declaration and initialization
    - Arithmetic operations (`++`, `--`, `+=`)
    - Variable scope
+   > *Learning objective:* Students should be able to declare, initialize, and manipulate variables of different data types, including understanding scope rules.
 
 2. **Conditional Structures**
    - Nested if-else statements
    - switch-case with break usage
+   > *Learning objective:* Students should be able to implement and trace both nested `if-else` and `switch-case` constructs correctly, ensuring proper use of `break`.
 
 3. **Loops**
    - for loops with multiple counters
    - Difference between while and do-while
    - Controlling loops using break and continue
+   > *Learning objective:* Students should be able to write and debug different loop constructs, understand when each type is appropriate, and control flow using `break` and `continue`.
 
 4. **Arrays**
    - One-dimensional and two-dimensional arrays
    - Accessing elements
    - Nested initialization
+   > *Learning objective:* Students should be able to declare, initialize, and access elements in one- and two-dimensional arrays, including nested initialization.
 """
     }
 ]
@@ -84,35 +93,64 @@ examples = [
 # Function to build the user prompt that tells the model what kind of output is needed
 def get_user_prompt(subject: str) -> str:
     """
-    Build the user prompt for the chat model based on the subject.
+    Construct a user-facing instruction that directs the chat model to generate three varied assessment questions
+    tailored to the given subject content,
+    including guidelines on difficulty progression, edge-case coverage, and clear code formatting.
     """
     if subject != 'Introduction to Programming in C++':
         raise ValueError(f"No user prompt defined for subject '{subject}'")
-
+    
     raw = f"""
-    You are an expert assistant in evaluating the proficiency of university students in the {subject}.
+    You are an expert assistant in evaluating the proficiency of university computer science students in the {subject}.
 
     Based on the following educational content:
     {examples[0]['subject_content']}
 
-    Create **3 varied assessment questions** that include:
-    - One Output Prediction question
-    - One Multiple Choice question
-    - One Code Correction question
+    Create exactly **three assessment questions**, one for each of the following types:
+    1. Output Prediction
+    2. Multiple Choice
+    3. Code Correction
 
     **Important guidelines for question creation:**
     1. Focus on concepts that are typically difficult or confusing for students.
     2. Try to include edge cases where appropriate.
     3. Use clean and well-indented code formatting.
-    5. Use realistic examples from practical programming scenarios.
+    4. Use realistic examples from practical programming scenarios.
+    5. “Start the response immediately with the first question. Do not include phrases like ‘Here are…’, ‘In this assessment…’, or similar.”
 
     **Each question must include the following format:**
     - A short title (e.g., "Question 1: Output Prediction")
     - A clearly written prompt
     - A code block (if applicable)
     - Options (for multiple choice questions)
+
+    **Additional instructions:**
+    1. Do **not** include any answer keys, correct answers, or explanations—only present the questions themselves.
+    2. Format the output in Markdown, using level-3 headings (`###`) for each question title and corresponding sections.
+
+    **Example output structure:**
+    ### Question 1: Output Prediction
+    ```cpp
+    // sample code here
+    ```
+    *(No answer key or explanation)*
+
+    ### Question 2: Multiple Choice
+    ```cpp
+    // sample code here
+    ```
+    A. Option 1
+    B. Option 2
+    C. Option 3
+    D. Option 4
+
+    ### Question 3: Code Correction
+    ```cpp
+    // code with an error here
+    ```
     """
     return textwrap.dedent(raw).strip()
+
 
 
 # Main function to generate exam questions for a given subject
@@ -135,9 +173,9 @@ def generate_exam_questions(subject: str) -> str :
                 {"role": "system", "content": system_msg},
                 {"role": "user", "content": user_msg}
             ],
-            max_tokens=1000,
-            temperature=0.3,
-            top_p=0.9,
+            max_tokens=512,
+            temperature=1,
+            top_p=0.95
         )
         return response.choices[0].message.content
       
